@@ -1,0 +1,22 @@
+@pc22222u202422620_HostAddress = http://localhost:5037
+
+GET {{pc22222u202422620_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+@host = http://localhost:5037
+@patientId = 123e4567-e89b-12d3-a456-426614174000
+
+POST {{host}}/api/v1/patients/{{patientId}}/prescriptions
+Content-Type: application/json
+
+{
+  "prescriptionNumber": "RX-000002",
+  "patientId": "{{patientId}}",
+  "startDate": "2026-11-18",
+  "endDate": "2026-11-25",
+  "dailyQuantity": 2,
+  "activeIngredient": "AMOXICILINA",
+  "status": "Draft",
+  "clinicalNotes": null
+}
