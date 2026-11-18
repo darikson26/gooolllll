@@ -7,6 +7,19 @@ using pc22222u202422620.Clinical.domain.Repositories;
 namespace pc22222u202422620.Clinical.Application;
 
 //dotnet ef migrations add InitialCreate
+
+
+/*# Primera vez: crea los archivos de migración
+-dotnet ef migrations add InitialCreate
+
+# Crea la base de datos y las tablas en MySQL
+-dotnet ef database update
+Después, solo si cambias el modelo, usa:
+
+
+dotnet ef migrations add NombreDelCambio
+dotnet ef database update 
+*/
 public class PrescriptionCommandService
 {
     private readonly IPrescriptionRepository _prescriptionRepository;
